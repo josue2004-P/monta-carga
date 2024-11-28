@@ -1,0 +1,32 @@
+$body-font:'Gotham-Black', sans-serif;
+$body-background-color: /*#f4f4f4*/#F8F8F8 ;
+$contrast-body-color: white;
+$header-height: 44px;
+
+
+$tablet: 640px;
+$desktop: 1024px;
+$desktopXL: 1280px;
+$desktop2XL: 1530px;
+
+
+$amarillo-botton: #fccc00;
+$border-amarillo-botton:#e2b805;
+$border-gris-botton:#585959;
+
+$gris-section:#5f5f5f;
+$gris-section-dos:#363636;
+$gris-items-servicios:#686868;
+
+$gris-items:#202121;
+
+
+$texto:#ffffff;
+
+
+/* BASE */
+@font-face {
+    font-family: 'Gotham-Black';
+    src: url('./assets/fuentes/GothamMedium_1.ttf') format('opentype');
+  }
+  

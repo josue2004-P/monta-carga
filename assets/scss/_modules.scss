@@ -1,0 +1,850 @@
+/*
+Modules styles
+*/
+
+/* MODULOS */
+.menu {
+  display: flex;
+  position: absolute;
+  align-items: center;
+  justify-content: space-between; /* Distribuye el espacio entre los elementos */
+  margin-bottom: 0;
+  list-style: none;
+  padding: 10px 1rem;
+  width: 100%; /* Asegura que el menú tome todo el ancho disponible */
+  z-index: 10;
+}
+
+.menu div:nth-child(2) {
+  order: 3; /* Mueve el segundo div al tercer lugar */
+}
+
+.menu div:nth-child(3) {
+  order: 2; /* Mueve el tercer div al segundo lugar */
+}
+
+.menu_link {
+  display: none;
+
+  @include desktop {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style: none;
+  }
+}
+
+.menu_link > li {
+  margin: 0 20px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.menu_link > button {
+  margin-left: 1rem;
+}
+
+.title_logo {
+  font-weight: 500;
+  font-size: 1.5rem;
+}
+
+.aside-info {
+  position: absolute;
+  display: flex;
+  gap: 1rem;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  justify-content: space-between;
+  transform: rotate(270deg); /* Rotamos 90 grados */
+  padding: 1rem 2rem;
+}
+
+.title-hero {
+  font-size: 2rem;
+  font-weight: 600;
+
+  @include tablet {
+    font-size: 3rem;
+  }
+}
+
+.text-hero {
+  margin-top: 1.5rem;
+  font-size: 1.5rem;
+  font-weight: 400;
+
+  @include tablet {
+    margin-top: 2.5rem;
+    font-size: 2rem;
+  }
+}
+
+.buttons-grid {
+  display: flex;
+  text-align: center;
+  gap: 1rem;
+  margin-top: 2.5rem;
+  @include tablet {
+    flex-direction: row;
+  }
+}
+
+.btn_cotizar {
+  background-color: #{$amarillo-botton};
+  padding: 12px 18px;
+  border-radius: 7px;
+  font-size: 16px;
+  color: #020202;
+  border-top: #{$border-amarillo-botton} solid 2px;
+  font-weight: 800;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  width: fit-content;
+}
+
+.btn_servicios {
+  background-color: #{$gris-section};
+  padding: 12px 18px;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 500;
+  border-top: #{$border-gris-botton} solid 1.8px;
+  width: fit-content;
+  color: white;
+  font-weight: 800;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.grid-hero-info {
+  background-color: #{$gris-section};
+  margin-top: -18rem;
+  width: 100%;
+  padding: 1rem;
+  justify-content: space-around;
+  @include tablet {
+    display: flex;
+    padding: 3rem 10rem;
+  }
+}
+
+.article-hero-info {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 1rem;
+
+  @include tablet {
+    width: 40%;
+  }
+}
+
+.container-img-hero-info {
+  width: 60%;
+  position: relative;
+  height: 100%;
+}
+
+.img-hero-info {
+  width: 44rem;
+  margin-top: -20rem;
+  display: none;
+
+  @include tablet {
+    display: flex;
+  }
+}
+
+.icono-items-hero-info {
+  margin-right: 1rem;
+}
+
+.items-hero-info {
+  width: 100%;
+  padding: 0.5rem 1.5rem 0.5rem 1.5rem;
+  border-radius: 8px;
+  display: flex;
+  font-size: 1rem;
+  align-items: center;
+  color: rgb(236, 231, 231);
+  background: rgb(84, 84, 84);
+  background: linear-gradient(
+    90deg,
+    rgba(84, 84, 84, 1) 0%,
+    rgba(95, 95, 95, 1) 100%
+  );
+  @include tablet {
+    padding: 0.5rem 7rem 0.5rem 1.5rem;
+    text-wrap: nowrap;
+    font-size: 1.1rem;
+  }
+}
+
+.container-icono-hero-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-right: 1rem;
+}
+
+.container-icono-hero-info > img {
+  margin: 0 auto;
+}
+
+.container-icono-hero-info > hr {
+  width: 100%;
+  background: #d2af18;
+  height: 0.1rem;
+}
+
+// SECCION CINTA
+
+.section-cinta {
+  background-color: #{$gris-section};
+  width: 100%;
+  overflow: hidden;
+}
+
+// SIMPRE LISTOS
+.baner-siempre-listos {
+  width: 90%;
+  margin: 4rem auto 0 auto;
+  background-color: #{$gris-section-dos};
+  border-radius: 8px;
+  position: relative;
+  padding: 10rem 1rem 1rem 1rem;
+
+  @include tablet {
+    display: flex;
+    padding: 4rem 4rem;
+  }
+}
+
+.baner-siempre-listos > .adorno {
+  width: 2rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: -7px 0 0 -8px;
+}
+
+.baner-content-info {
+  width: 100%;
+  @include tablet {
+    width: 50%;
+  }
+}
+
+.baner-content-info > p {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  @include tablet {
+    font-size: 2.2rem;
+  }
+}
+
+.baner-content-info > .btn_cotizar {
+  width: 100%;
+  @include tablet {
+    width: 50%;
+  }
+}
+
+.gradiente-section {
+  background: #{$gris-section};
+  // background: rgb(95,95,95);
+  // background: linear-gradient(0deg, rgba(95,95,95,1) 0%, rgba(32,33,33,0.89) 15%, rgba(32,33,33,0.89) 48%, rgba(32,33,33,0.89) 71%, rgba(95,95,95,1) 100%);
+}
+
+.baner-content-img {
+  position: relative;
+  justify-content: center;
+}
+
+.baner-img {
+  width: 14rem;
+  left: 2rem;
+  position: absolute;
+  margin-top: -20rem;
+  @include tablet {
+    width: 31rem;
+  }
+}
+
+.content-baner-about {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.baner-about {
+  margin-top: -4rem;
+  width: 12rem;
+
+  @include tablet {
+    width: 30rem;
+    margin-top: -10rem;
+  }
+}
+
+// NOSOTROS
+
+.header-text {
+  text-align: center;
+}
+
+.header-text > h3 {
+  font-size: 1.8rem;
+  font-weight: 500;
+  @include tablet {
+    font-size: 3.8rem;
+  }
+}
+
+.header-text > p {
+  font-size: 0.9rem;
+  font-weight: 500;
+  width: 96%;
+
+  margin: 2rem auto;
+  @include tablet {
+    width: 80%;
+
+    font-size: 1.3rem;
+  }
+}
+
+.adorno {
+  width: 1rem;
+
+  @include tablet {
+    width: 2rem;
+  }
+}
+
+// IMG NOSOTROS
+
+.content-img-nosotros {
+  margin-top: 2rem;
+}
+
+.content-img-nosotros > img {
+  width: 100%;
+}
+
+.content-items-nosotros {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.content-items-nosotros > .content-item {
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  border-radius: 8px;
+  display: flex;
+  font-size: 1rem;
+  align-items: center;
+  color: rgb(236, 231, 231);
+  background: #{$gris-items};
+
+  @include tablet {
+    text-wrap: nowrap;
+    width: 100%;
+    font-size: 1.1rem;
+    padding: 0.5rem 13rem 0.5rem 1.5rem;
+  }
+}
+
+// servicios
+
+.content-info-servicios {
+  width: 100%;
+  @include tablet {
+    width: 48%;
+  }
+}
+
+.content-info-text-servicios {
+  display: flex;
+
+  @include tablet {
+    margin-left: -2rem;
+  }
+}
+
+.content-info-text-servicios > .adorno {
+  width: 1.5rem;
+  height: 1.8rem;
+  margin-top: 0.3rem;
+
+  @include tablet {
+    width: 2rem;
+    height: 2.3rem;
+  }
+}
+
+.content-info-text-servicios > h2 {
+  font-weight: 500;
+  font-size: 2.2rem;
+  margin-left: 0.5rem;
+  @include tablet {
+    font-size: 3rem;
+    margin-left: 1rem;
+  }
+}
+
+.content-info-servicios > p {
+  font-weight: 400;
+  font-size: 1rem;
+  margin-top: 1.5rem;
+  @include tablet {
+    font-size: 1.2rem;
+  }
+}
+
+.content-items-servicios {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.5rem;
+  margin-top: 3rem;
+  width: 100%;
+  justify-content: space-between;
+
+  @include tablet {
+    width: fit-content;
+    display: flex;
+    gap: 1rem;
+    margin-top: 5rem;
+  }
+}
+
+.items-servicios {
+  border-radius: 5px;
+  height: 9rem;
+  background: #{$gris-items-servicios};
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  @include tablet {
+    width: 20rem;
+    height: 26rem;
+  }
+}
+
+.item-1 {
+  margin-top: 6rem;
+  @include tablet {
+    margin-top: 20rem;
+  }
+}
+
+.item-3 {
+  margin-top: 2.5rem;
+  @include tablet {
+    margin-top: 6rem;
+  }
+}
+
+.item-4,
+.item-5,
+.item-6 {
+  margin-top: 1rem;
+}
+
+.m-text-items-servicios {
+  padding: 1rem 0.5rem;
+  @include tablet {
+    padding: 3rem 1.5rem;
+  }
+}
+
+.m-text-items-servicios > h3 {
+  font-weight: 500;
+  font-size: 1rem;
+  color: #020202;
+
+  @include tablet {
+    font-size: 3rem;
+  }
+}
+
+.m-text-items-servicios > hr {
+  background-color: #{$amarillo-botton};
+  height: 2px;
+  width: 1rem;
+  margin-bottom: 1.7rem;
+  @include tablet {
+    width: 3rem;
+    height: 3px;
+  }
+}
+
+.m-text-items-servicios > p {
+  font-size: 0.5rem;
+
+  @include tablet {
+    font-size: 1.33rem;
+  }
+}
+
+.m-img-item-servicio {
+  object-fit: cover;
+  height: 1rem;
+  width: 100%;
+  mask-image: linear-gradient(to top, black 10%, transparent);
+  opacity: 0.8; /* Ajusta la opacidad según sea necesario */
+  @include tablet {
+    height: 9rem;
+  }
+}
+
+// PROCESO DE CONTRATACION
+
+.m-container-items-proceso-contratacion {
+  display: flex;
+  gap: 6rem;
+  justify-content: space-between;
+  margin: 10rem 0 0 0;
+  flex-direction: column;
+  @include tablet {
+    gap: 1rem;
+    flex-direction: row;
+  }
+}
+
+.m-items-proceso-contratacion {
+  padding: 1rem;
+  background-color: #5f5f5f;
+  text-align: center;
+  position: relative;
+  border-radius: 10px;
+  z-index: 2;
+}
+
+.m-items-proceso-contratacion > span {
+  font-size: 8rem;
+  width: 100%;
+  font-weight: 900;
+  color: #282a2a;
+  top: -6.4rem;
+  left: 0;
+  position: absolute;
+  z-index: 1;
+}
+
+.m-items-proceso-contratacion > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+  height: 100%;
+}
+
+.m-container-header-proceso-contratacion {
+  display: flex;
+}
+
+.m-container-text-proceso-contratacion {
+  width: 40%;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.m-container-text-proceso-contratacion > img {
+  width: 1.7rem;
+  margin-top: 0.4rem;
+  height: 2rem;
+}
+
+.m-container-text-proceso-contratacion > h3 {
+  font-weight: 500;
+  font-size: 2rem;
+  @include tablet {
+    font-size: 3rem;
+  }
+}
+
+.m-container-img-proceso-contratacion {
+  width: 60%;
+  position: relative;
+}
+
+.m-container-img-proceso-contratacion > img {
+  width: 17rem;
+  position: absolute;
+  top: -18rem;
+  right: -1rem;
+  z-index: 5;
+
+  @include tablet {
+    width: 22rem;
+    top: -15rem;
+    right: 0;
+  }
+}
+
+.m-proceso-contratacion {
+  display: flex;
+  gap: 1rem;
+  font-weight: 300;
+  flex-direction: column;
+
+  @include tablet {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+.m-proceso-contratacion > .m-item-1 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  text-align: start;
+
+  @include tablet {
+    width: 30rem;
+  }
+}
+
+.m-item-1 > h3 {
+  font-size: 2.2rem;
+  color: #565656;
+}
+
+.m-item-1 > p {
+  font-size: 1.5rem;
+  margin: 1rem 0;
+
+  @include tablet {
+    font-size: 2rem;
+    margin: 1rem 0;
+  }
+}
+
+.m-item-1 > hr {
+  background-color: #{$amarillo-botton};
+  height: 3px;
+  width: 2rem;
+}
+
+.m-item-2 > h3 {
+  font-weight: 500;
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+}
+
+.m-items-2-h3 {
+  margin-top: 2rem;
+}
+
+.m-proceso-contratacion {
+  padding: 0rem 1.5rem;
+}
+
+.m-proceso-contratacion > .m-item-2 {
+  width: 100%;
+  text-align: start;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  margin-top: 1rem;
+  @include tablet {
+    margin-top: 3.5rem;
+    width: 80%;
+  }
+}
+
+.m-division-proceso-pasos-contratacion {
+  width: 90%;
+  margin: 0 auto;
+  height: 2rem;
+  @include tablet {
+    width: 70%;
+    height: 5rem;
+  }
+}
+
+.m-division-proceso-pasos-contratacion > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+// GALERIA
+.m-grid-galeria {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 20px;
+  @include tablet {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.m-container-img-galeria {
+  width: 100%;
+  height: 13rem;
+}
+
+.m-container-img-galeria > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+// PREGUNTAS FRECUNTES
+
+.m-items-preguntas {
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+}
+
+.m-item-pregunta {
+  background-color: #5f5f5f;
+  padding: 1rem;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  width: 90%;
+  margin: 0 auto;
+  @include tablet {
+    width: 50%;
+  }
+}
+
+.m-item-pregunta > h4 {
+  font-weight: 500;
+  font-size: 0.9rem;
+  @include tablet {
+    font-size: 1.2rem;
+  }
+}
+
+.m-item-pregunta > p {
+  font-weight: 500;
+  font-size: 0.6rem;
+  @include tablet {
+    font-size: 0.7rem;
+  }
+}
+
+// contactanos
+.m-img-cinta {
+  position: relative;
+  top: -6.3rem;
+  rotate: 353.5deg;
+}
+
+.m-container-contactanos {
+  background-color: #5f5f5f;
+  padding: 1rem;
+  border-radius: 10px;
+  margin-top: 5rem;
+  text-align: center;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  @include tablet {
+    padding: 2rem;
+  }
+}
+
+.m-container-contactanos > h4 {
+  border-radius: 10px;
+  margin: 0rem 0 10px 0px;
+  font-size: 1.5rem;
+  font-weight: 600;
+  @include tablet {
+    font-size: 1.9rem;
+  }
+}
+
+.m-container-contactanos > img {
+  border-radius: 10px;
+  margin: 1.5rem 0;
+  width: 17rem;
+  height: 7rem;
+  object-fit: cover;
+  @include tablet {
+    width: 100%;
+  }
+}
+
+.m-container-contactanos > .btn_cotizar {
+  font-size: 0.8rem;
+  @include tablet {
+    font-size: 1rem;
+  }
+}
+
+.m-text-header-contactanos {
+  margin: 1rem auto;
+  font-weight: 400;
+  width: 90%;
+}
+
+.m-o {
+  margin: 1rem auto 0.2rem auto;
+  @include tablet {
+    margin: 2rem auto 1.7rem auto;
+  }
+}
+
+.m-text-contacto-asesor {
+  font-size: 0.8rem;
+  width: 80%;
+  font-weight: 300;
+  margin: 1rem auto;
+  @include tablet {
+    font-size: 0.8rem;
+    width: 50%;
+  }
+}
+
+.m-container-items-contacto {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  margin-top: 1rem;
+}
+
+.m-item-contacto {
+  background-color: #4a4a4a;
+  padding: 1rem 2.5rem 1rem 2.5rem;
+  font-weight: 500;
+  font-size: 1rem;
+  border-radius: 10px;
+
+  @include tablet {
+    padding: 1rem 2.5rem 1rem 2.5rem;
+    font-weight: 500;
+    font-size: 1.47rem;
+  }
+}
+
+.m-footer-logo {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 5rem;
+}
+
+.m-footer-logo > img {
+  width: 40%;
+  margin: 0 auto;
+}
